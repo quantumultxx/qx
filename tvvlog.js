@@ -8,7 +8,7 @@ hostname = txh*.com, txk*.com, tx*.com
 
 
 
-const $ = new Env('糖心𝐕𝐋𝐎𝐆')
+const $ =new Env('糖心𝐕𝐋𝐎𝐆')
 const isRequestBody = $request.body != undefined
 let body = ``
 ;(async () => (body = isRequestBody ? await ModifyRequestBody() : await ModifyResponseBody()))()
