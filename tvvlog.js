@@ -1,14 +1,13 @@
 
-^https?:\/\/tx.*\.com\/h5\/(user\/info|movie\/(block|search)|system\/info)$ url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/TXVLOG/txvlog.js
+/*^https?:\/\/tx.*\.com\/h5\/(user\/info|movie\/(block|search)|system\/info)$ url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/TXVLOG/txvlog.js
 ^https?:\/\/tx.*\.com\/h5\/movie\/detail$ url script-request-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/TXVLOG/txvlog.js
 
-hostname = txh*.com, txk*.com, tx*.com
+hostname = txh*.com, txk*.com, tx*.com*/
 
 
 
 
 
-const $ =new Env('糖心𝐕𝐋𝐎𝐆')
 const isRequestBody = $request.body != undefined
 let body = ``
 ;(async () => (body = isRequestBody ? await ModifyRequestBody() : await ModifyResponseBody()))()
