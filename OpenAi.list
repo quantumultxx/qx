@@ -5,7 +5,6 @@ HOST-SUFFIX, chat.openai.com.cdn.cloudflare.net, OpenAI
 HOST-SUFFIX, client-api.arkoselabs.com, OpenAI
 HOST-SUFFIX, events.statsigapi.net, OpenAI
 HOST-SUFFIX, featuregates.org, OpenAI
-HOST-SUFFIX, googleapis.com, OpenAI
 HOST-SUFFIX, identrust.com, OpenAI
 HOST-SUFFIX, intercom.io, OpenAI
 HOST-SUFFIX, intercomcdn.com, OpenAI
