@@ -27,7 +27,7 @@ var vipHeaders = {"buvid":"
 61646494649194676494649167949794676484944"}；
 //此处填写共享者headers
 var uid = Number(cookie2object(headers.Cookie).DedeUserID);
-let uids = [6434646764]//此处填写被共享者账号uid，以英文逗号隔开
+let uids = [507342742]//此处填写被共享者账号uid，以英文逗号隔开
 let result = uids.includes(uid);
 if (result) {
 	headers['buvid'] = vipHeaders.buvid;
