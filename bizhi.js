@@ -19,7 +19,7 @@ hostname = leancloud.emotionwp.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+/*var chxm1023 = JSON.parse($response.body);
 const user = /classes\/wpf_account/;
 const xiazai = /classes/;
 const save = /batch\/save/;
@@ -39,7 +39,7 @@ if(user.test($request.url)){
       "createdAt" : "2023-09-09T09:09:09Z",
       "coin" : 99999
   }];
-}
+}*/
 
 if(xiazai.test($request.url)){
   chxm1023.results.forEach(item => {
