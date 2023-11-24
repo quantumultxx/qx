@@ -1,3 +1,9 @@
+/*# 驾校一点通
+ 2 ^https:\/\/vipapi\.jxedt\.com\/store\/(checkRights|batchCheckRights|checkRights?|popRealExamProcess|getUserRightsLabelSummary) url script-response-body 
+
+hostname =vipapi.jxedt.com
+*/
+
 const url = $request.url;
 const body = $response.body;
 const path1 = "checkRights";
