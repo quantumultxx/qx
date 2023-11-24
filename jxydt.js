@@ -2,7 +2,7 @@
 驾校一点通
 ^https:\/\/vipapi\.jxedt\.com\/store\/(checkRights|batchCheckRights|checkRights?|popRealExamProcess|getUserRightsLabelSummary) url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/jxydt.js 
 
-hostname =vipapi.jxedt.com
+hostname = vipapi.jxedt.com
 */
 
 const url = $request.url;
