@@ -8,8 +8,5 @@ hostname = api.vnce.top
 
 
 var body = $response.body;
-obj.state = 200;
-obj.message = 正常;
-obj.expires_date_ms = 1743258555;
-obj.code = 200;
+obj.expires_date_ms = "1743258555";
 $done({ body: JSON.stringify(obj) });
