@@ -26,7 +26,7 @@ let response2 = {
   "code": "200"
 };
 
-let expires_date_ms_variable =  "1912348800000000"; // 你想要的新 expires_date_ms 值
+let expires_date_ms_variable = "1912348800000000"; // 你想要的新 expires_date_ms 值
 let productid_variable = "wenet_free_2555day"; // 你想要的新 productid 值
 
 response1.data.expires_date_ms = expires_date_ms_variable;
