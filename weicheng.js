@@ -6,8 +6,8 @@ script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/weic
 hostname = api.vnce.top
 */
 
-var body = $response.body;
-var obj = JSON.parse(body);
+
+let obj = JSON.parse($response.body);
 obj.state = 200;
 obj.message = "正常";
 obj.expires_date_ms = "1743258555";
