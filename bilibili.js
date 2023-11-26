@@ -8,7 +8,7 @@
 ^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/quantumultxx/qx/main/bilibili.js
 
 [mitm]
-hostname = *.biliapi.*, *.bilibili.*
+hostname = *.biliapi.*, *.bilibili.*, broadcast.chat.bilibili.com
 
 */
 
