@@ -1,8 +1,9 @@
 /*
+[rewrite_local]
 ^http:\/\/api\.vnce\.top\/wenetverifyticket url 
 script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/weicheng.js
 
-
+[mitm]
 hostname = api.vnce.top
 */
 
