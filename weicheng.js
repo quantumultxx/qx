@@ -1,6 +1,5 @@
 /*
 [rewrite_local]
-^http:\/\/api\.vnce\.top\/wenetproductid url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/weicheng.js
 ^http:\/\/api\.vnce\.top\/wenetverifyticket url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/weicheng.js
 
 [mitm]
@@ -8,7 +7,16 @@ hostname = api.vnce.top
 */
 
 
-var body = $response.body;
-obj.productid = "wenet_fee_730day";
-obj.expires_date_ms = "1743258555";
-$done({ body: JSON.stringify(obj) });
+let customExpiresDate = "1743258555000"; // 你想要设置的新的 expires_date_ms 变量
+
+let response = {
+  "message": "success",
+  "data": {
+    "state": 200,
+    "message": "正常",
+    "expires_date_ms": customExpiresDate
+  },
+  "code": 200
+};
+
+$done({ body: JSON.stringify(response) });
