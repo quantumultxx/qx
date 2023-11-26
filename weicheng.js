@@ -1,6 +1,6 @@
 /*
 ^http:\/\/api\.vnce\.top\/wenetverifyticket url 
-script-response-body 
+script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/weicheng.js
 
 
 hostname = api.vnce.top
