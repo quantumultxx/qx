@@ -26,7 +26,7 @@ let response2 = {
 };
 
 let expires_date_ms_variable = "1912348800000000"; // 你想要的新 expires_date_ms 值
-let productid_variable = "wenet_fee_2557days"; // 你想要的新 productid 值
+let productid_variable = "wenet_fee_2557day"; // 你想要的新 productid 值
 
 response1.data.expires_date_ms = expires_date_ms_variable;
 response2.data.productid = productid_variable;
