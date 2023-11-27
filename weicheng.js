@@ -1,14 +1,14 @@
 /*
 [rewrite_local]
 ^http:\/\/api\.vnce\.top\/wenetproductid url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/weicheng.js
-
+^http:\/\/api\.vnce\.top\/wenetverifyticket url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/weicheng.js
 
 [mitm]
 hostname = api.vnce.top
 */
 
 
-const productId = "wenet_fee_2557day"; // 替换成你想要的新 product id
+const productId = "your_new_product_id"; // 替换成你想要的新 product id
 
 const myRequest = {
     url: "http://api.vnce.top/wenetproductid",
@@ -22,11 +22,13 @@ const myRequest = {
         'Accept': '*/*'
     },
     body: JSON.stringify({
-        "message": "成功",
+        "message": "success",
         "data": {
-            "productid": productId
+            "state": 200,
+            "message": "正常",
+            "expires_date_ms": "1912348800000"
         },
-        "code": "200"
+        "code": 200
     })
 };
 
