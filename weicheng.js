@@ -7,32 +7,17 @@
 hostname = api.vnce.top
 */
 
-let response1 = {
-  "message": "success",
-  "data": {
-    "state": 200,
-    "message": "正常",
-    "expires_date_ms": "1711722555000"
-  },
-  "code": 200
-};
+const requestUrl = $request.url;
 
-let response2 = {
-  "message": "成功",
-  "data": {
-    "productid": "wenet_fee_365day"
-  },
-  "code": "200"
-};
-
-let expires_date_ms_variable =  "1912348800000000"; // 你想要的新 expires_date_ms 值
-let productid_variable = "wenet_fee_2557day"; // 你想要的新 productid 值
-
-response1.data.expires_date_ms = expires_date_ms_variable;
-response2.data.productid = productid_variable;
-
-// 先执行 response1
-$done({ body: JSON.stringify(response1) });
-
-// 然后执行 response2
-$done({ body: JSON.stringify(response2) });
+if (requestUrl.includes("http://api.vnce.top/wenetproductid")) {
+    // 匹配 wenetproductid 的 URL，执行 productid 变量
+    const productid_variable = "wenet_fee_2557"; // 替换成你想要的新 productid 值
+    $done({ body: JSON.stringify({ "message": "成功", "data": { "productid": productid_variable }, "code": "200" }) });
+} else if (requestUrl.includes("http://api.vnce.top/wenetverifyticket")) {
+    // 匹配 wenetverifyticket 的 URL，执行 expires_date_ms 变量
+    const expires_date_ms_variable = "1912348800000"; // 替换成你想要的新 expires_date_ms 值
+    $done({ body: JSON.stringify({ "message": "成功", "data": { "state": 200, "message": "正常", "expires_date_ms": expires_date_ms_variable }, "code": 200 }) });
+} else {
+    // 其他情况
+    $done();
+}
