@@ -7,10 +7,33 @@
 hostname = api.vnce.top
 */
 
-
 const productId = "wenet_fee_2557day"; // 替换成你想要的新 product id
+const expiresDateMs = "1912348800000"; // 替换成你想要的过期日期的时间戳
 
-const myRequest = {
+// 第一个请求
+const myRequest1 = {
+    url: "http://api.vnce.top/wenetproductid",
+    method: "GET",
+    headers: {
+        'User-Agent': 'WeNet/1.5 (iPhone; iOS 16.4; Scale/2.00)',
+        'Host': 'api.vnce.top',
+        'Connection': 'keep-alive',
+        'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9',
+        'Accept-Encoding': 'gzip, deflate',
+        'Accept': '*/*'
+    },
+    body: JSON.stringify({
+        "message": "成功",
+        "data": {
+            "productid": productId,
+            "expires_date_ms": expiresDateMs
+        },
+        "code": "200"
+    })
+};
+
+// 第二个请求
+const myRequest2 = {
     url: "http://api.vnce.top/wenetproductid",
     method: "GET",
     headers: {
@@ -32,10 +55,19 @@ const myRequest = {
     })
 };
 
-$task.fetch(myRequest).then(response => {
-    console.log(response.statusCode + "\n\n" + response.body);
-    $done();
-}, reason => {
-    console.log(reason.error);
+// 执行第一个请求
+$task.fetch(myRequest1).then(response1 => {
+    console.log(response1.statusCode + "\n\n" + response1.body);
+
+    // 执行第二个请求
+    $task.fetch(myRequest2).then(response2 => {
+        console.log(response2.statusCode + "\n\n" + response2.body);
+        $done();
+    }, reason2 => {
+        console.log(reason2.error);
+        $done();
+    });
+}, reason1 => {
+    console.log(reason1.error);
     $done();
 });
