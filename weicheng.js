@@ -8,7 +8,7 @@ hostname = api.vnce.top
 */
 
 
-const productId = "your_new_product_id"; // 替换成你想要的新 product id
+const productId = "wenet_fee_2557day"; // 替换成你想要的新 product id
 
 const myRequest = {
     url: "http://api.vnce.top/wenetproductid",
