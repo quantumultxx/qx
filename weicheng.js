@@ -7,6 +7,7 @@
 hostname = api.vnce.top
 */
 
+
 let response1 = {
   "message": "success",
   "data": {
@@ -31,4 +32,4 @@ let productid_variable = "wenet_fee_2557day"; // 你想要的新 productid 值
 response1.data.expires_date_ms = expires_date_ms_variable;
 response2.data.productid = productid_variable;
 
-$done({ body: JSON.stringify(response1) + '\n' + JSON.stringify(response2) });
+$done({ body: JSON.stringify([response1, response2]) });
