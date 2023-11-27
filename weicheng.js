@@ -7,67 +7,28 @@
 hostname = api.vnce.top
 */
 
-const productId = "wenet_fee_2557day"; // 替换成你想要的新 product id
-const expiresDateMs = "1912348800000"; // 替换成你想要的过期日期的时间戳
-
-// 第一个请求
-const myRequest1 = {
-    url: "http://api.vnce.top/wenetproductid",
-    method: "GET",
-    headers: {
-        'User-Agent': 'WeNet/1.5 (iPhone; iOS 16.4; Scale/2.00)',
-        'Host': 'api.vnce.top',
-        'Connection': 'keep-alive',
-        'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9',
-        'Accept-Encoding': 'gzip, deflate',
-        'Accept': '*/*'
-    },
-    body: JSON.stringify({
-        "message": "成功",
-        "data": {
-            "productid": productId,
-            "expires_date_ms": expiresDateMs
-        },
-        "code": "200"
-    })
+let response1 = {
+  "message": "success",
+  "data": {
+    "state": 200,
+    "message": "正常",
+    "expires_date_ms": "1711722555000"
+  },
+  "code": 200
 };
 
-// 第二个请求
-const myRequest2 = {
-    url: "http://api.vnce.top/wenetproductid",
-    method: "GET",
-    headers: {
-        'User-Agent': 'WeNet/1.5 (iPhone; iOS 16.4; Scale/2.00)',
-        'Host': 'api.vnce.top',
-        'Connection': 'keep-alive',
-        'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9',
-        'Accept-Encoding': 'gzip, deflate',
-        'Accept': '*/*'
-    },
-    body: JSON.stringify({
-        "message": "success",
-        "data": {
-            "state": 200,
-            "message": "正常",
-            "expires_date_ms": "1912348800000"
-        },
-        "code": 200
-    })
+let response2 = {
+  "message": "成功",
+  "data": {
+    "productid": "wenet_fee_365day"
+  },
+  "code": "200"
 };
 
-// 执行第一个请求
-$task.fetch(myRequest1).then(response1 => {
-    console.log(response1.statusCode + "\n\n" + response1.body);
+let expires_date_ms_variable = "1912348800000000"; // 你想要的新 expires_date_ms 值
+let productid_variable = "wenet_fee_2557days"; // 你想要的新 productid 值
 
-    // 执行第二个请求
-    $task.fetch(myRequest2).then(response2 => {
-        console.log(response2.statusCode + "\n\n" + response2.body);
-        $done();
-    }, reason2 => {
-        console.log(reason2.error);
-        $done();
-    });
-}, reason1 => {
-    console.log(reason1.error);
-    $done();
-});
+response1.data.expires_date_ms = expires_date_ms_variable;
+response2.data.productid = productid_variable;
+
+$done({ body: JSON.stringify(response1) + '\n' + JSON.stringify(response2) });
