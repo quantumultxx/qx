@@ -1,6 +1,6 @@
 /*
 [rewrite_local]
-^https:\/\/gzfanyin\.com\/api\/ums\/getMember url script-response-body 
+^https:\/\/gzfanyin\.com\/api\/ums\/getMember url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/fk.js     
 [mitm]
 hostname = gzfanyin.com
 */
