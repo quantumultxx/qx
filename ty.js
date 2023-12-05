@@ -1,7 +1,7 @@
 /***************************
 微橙
 [rewrite_local]
-^https:\/\/translator\.felo\.me\/api\/plan\/current url script-response-body 
+^https:\/\/translator\.felo\.me\/api\/plan\/current url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/ty.js    
 
 
 [mitm]
