@@ -1,6 +1,6 @@
 /***************************
 [rewrite_local]
-^https:\/\/gzfanyin\.com\/api\/vip\/getVipList url script-responsebody    
+^https:\/\/gzfanyin\.com\/api\/vip\/getVipList url script-responsebody https://raw.githubusercontent.com/quantumultxx/qx/main/11.js    
 [mitm]
 hostname = gzfanyin.com
 ****************************/
