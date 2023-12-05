@@ -1,6 +1,6 @@
 /*
 [rewrite_local]
-^https:\/\/gzfanyin\.com\/api\/ums\/getMember url reject-dict
+^https:\/\/gzfanyin\.com\/api\/ums\/getMember url script-response-body 
 [mitm]
 hostname = gzfanyin.com
 */
