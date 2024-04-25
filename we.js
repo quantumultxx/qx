@@ -3,7 +3,7 @@
 
 [rewrite_local]
 
-^http:\/\/api\.vnce\.top\/wenetqueryaction url script-response-body 
+^http:\/\/api\.vnce\.top\/wenetqueryaction url script-response-body https://raw.githubusercontent.com/quantumultxx/qx/main/we.js 
 
 
 [mitm]
