@@ -17,7 +17,6 @@ let obj = {
     "state": 200,
     "message": "正常",
     "expires_date_ms": "3742732800000",
-    "productid": "2577"
   },
   "code": 200
 };
