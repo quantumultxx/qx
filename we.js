@@ -1,0 +1,25 @@
+/***************************
+微橙
+
+[rewrite_local]
+
+^http:\/\/api\.vnce\.top\/wenetqueryaction url script-response-body 
+
+
+[mitm]
+hostname = api.vnce.top
+
+****************************/
+
+let obj = {
+  "message": "success",
+  "data": {
+    "state": 200,
+    "message": "正常",
+    "expires_date_ms": "3742732800000",
+    "productid": "2577"
+  },
+  "code": 200
+};
+
+$done({ body: JSON.stringify(obj) });
